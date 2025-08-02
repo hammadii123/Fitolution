@@ -1,8 +1,8 @@
-"use client"
-import { motion } from "framer-motion"
-import { Dumbbell, Users, Clock, Target, Zap, Heart } from "lucide-react"
-import Button from "../components/ui/Button"
-import Card from "../components/ui/Card"
+"use client";
+import { motion } from "framer-motion";
+import { Dumbbell, Users, Clock, Target, Zap, Heart } from "lucide-react";
+import Button from "../components/ui/Button";
+import Card from "../components/ui/Card";
 
 const services = [
   {
@@ -47,7 +47,7 @@ const services = [
     features: ["Keycard access", "Security cameras", "Emergency support", "Flexible hours"],
     image: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=500&h=300&fit=crop",
   },
-]
+];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -57,7 +57,7 @@ const containerVariants = {
       staggerChildren: 0.1,
     },
   },
-}
+};
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -68,22 +68,22 @@ const itemVariants = {
       duration: 0.5,
     },
   },
-}
+};
 
 const Services = () => {
   return (
-    <div className="min-h-screen bg-black pt-20">
+    <div className="min-h-screen bg-black overflow-x-hidden pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-20 overflow-x-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-lime-400/20 to-green-400/20" />
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-screen-xl w-full mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 break-words">
               Our <span className="text-lime-400">Services</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
@@ -94,8 +94,8 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20 overflow-x-hidden">
+        <div className="max-w-screen-xl w-full mx-auto px-4">
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -137,8 +137,8 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-lime-400 to-green-400">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 bg-gradient-to-r from-lime-400 to-green-400 overflow-x-hidden">
+        <div className="max-w-screen-xl w-full mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -157,7 +157,7 @@ const Services = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;

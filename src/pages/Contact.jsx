@@ -1,10 +1,18 @@
-"use client"
-import { motion } from "framer-motion"
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Twitter } from "lucide-react"
-import Button from "../components/ui/Button"
-import Input from "../components/ui/Input"
-import Textarea from "../components/ui/Textarea"
-import Card from "../components/ui/Card"
+"use client";
+import { motion } from "framer-motion";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Instagram,
+  Facebook,
+  Twitter,
+} from "lucide-react";
+import Button from "../components/ui/Button";
+import Input from "../components/ui/Input";
+import Textarea from "../components/ui/Textarea";
+import Card from "../components/ui/Card";
 
 const contactInfo = [
   {
@@ -27,7 +35,7 @@ const contactInfo = [
     title: "Hours",
     details: ["Mon-Fri: 5:00 AM - 11:00 PM", "Sat-Sun: 6:00 AM - 10:00 PM"],
   },
-]
+];
 
 const membershipPlans = [
   {
@@ -70,11 +78,11 @@ const membershipPlans = [
     ],
     popular: false,
   },
-]
+];
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-black pt-20">
+    <div className="min-h-screen bg-black pt-20 overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-lime-400/20 to-green-400/20" />
@@ -95,7 +103,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Info */}
+      {/* Contact Info Cards */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
@@ -126,7 +134,7 @@ const Contact = () => {
 
           {/* Contact Form & Map */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+            {/* Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -162,7 +170,9 @@ const Contact = () => {
                       rows={5}
                       className="bg-gray-800 border-gray-600 text-white placeholder:text-gray-400"
                     />
-                    <Button className="w-full bg-lime-400 hover:bg-lime-500 text-black">Send Message</Button>
+                    <Button className="w-full bg-lime-400 hover:bg-lime-500 text-black">
+                      Send Message
+                    </Button>
                   </div>
                 </div>
               </Card>
@@ -278,7 +288,7 @@ const Contact = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

@@ -10,7 +10,7 @@ import CTASection from "../components/CTASection"
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black overflow-x-hidden">
       <Hero />
       <BrandLogos />
       <Inspiration />

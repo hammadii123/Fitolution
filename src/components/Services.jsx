@@ -9,23 +9,53 @@ const services = [
     icon: Dumbbell,
     title: "Quality Training",
     description: "Professional equipment and expert guidance for optimal results",
+    more: [
+      "Certified personal trainers for customized routines",
+      "Industry-grade gym equipment for all fitness levels",
+      "Focus on form correction, injury prevention, and posture",
+      "Training plans adjusted to goals: weight loss, muscle gain, etc.",
+      "Track progress with regular performance assessments"
+    ],
   },
   {
     icon: Users,
     title: "Strength Build",
     description: "Build muscle and increase strength with our proven programs",
+     more: [
+      "Structured strength programs: beginner to advanced",
+      "Emphasis on compound lifts (squat, deadlift, bench, etc.)",
+      "Periodic progressive overload for consistent growth",
+      "Nutrition and recovery guidance included",
+      "Group strength training sessions and 1:1 coaching"
+    ],
   },
   {
     icon: Clock,
     title: "Fat Loss",
     description: "Effective fat burning workouts designed for maximum efficiency",
+     more: [
+      "HIIT, circuit training, and metabolic workouts",
+      "Real-time calorie tracking and goal setting",
+      "Nutrition plans tailored for fat reduction",
+      "Weekly check-ins and body fat measurements",
+      "Cardio & strength combo plans for lasting results"
+    ],
   },
   {
     icon: Target,
     title: "24/7 Support",
     description: "Round-the-clock support and guidance from our expert team",
+    more: [
+      "Chat support with trainers and dietitians anytime",
+      "Video tutorials & FAQs accessible 24/7",
+      "Emergency support during home workouts",
+      "Personalized reminders, tips, and motivation",
+      "Instant feedback via mobile app or web portal"
+    ],
   },
 ]
+
+
 
 const Services = () => {
   const [modal,setModal] = useState();
@@ -79,7 +109,7 @@ const Services = () => {
         onClose={() => setModal(null)}
         title={modal?.title}
         icon={modal?.icon}
-        content={modal?.description}
+        content={modal?.more}
       />
 
     </section>

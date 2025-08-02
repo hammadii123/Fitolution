@@ -34,20 +34,29 @@ const Modal = ({ open, onClose, title, icon: Icon, content }) => {
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+              className="absolute  top-3 right-3 text-gray-800  transition-transform duration-200 ease-in-out hover:-rotate-45 hover:scale-110 mt-4"
               onClick={onClose}
             >
-              <X className="w-6 h-6" />
+              <X className="w-8 h-8" /> 
             </button>
 
-            <div className="flex items-center gap-4 mb-4">
-              <div className="bg-lime-400 p-3 rounded-lg">
+            <div className="flex items-center gap-4 mb-4 ">
+              <div className="bg-lime-300 p-3 rounded-lg">
                 <Icon className="w-6 h-6 text-black" />
               </div>
-              <h3 className="text-2xl font-bold">{title}</h3>
+              <h3 className="text-3xl font-bold ">{title}</h3>
             </div>
+            <ul className="list-disc p-5">
 
-            <p className="text-gray-700">{content}</p>
+            {content.map((items,index)=>(
+              <li className="text-xl hover:scale-105 hover:transition-all hover:duration-150 hover:cursor-pointer font-semibold my-2" key={index}>{items}</li>
+              
+            ))}
+            </ul>
+
+
+
+            {/* <p className="text-gray-700">{content}</p> */}
           </motion.div>
         </motion.div>
       )}

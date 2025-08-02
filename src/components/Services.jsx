@@ -2,7 +2,8 @@
 import { motion } from "framer-motion"
 import { Dumbbell, Users, Clock, Target } from "lucide-react"
 import Button from "./ui/Button"
-
+import { useState } from "react"
+import Modal from "./ui/Modal"
 const services = [
   {
     icon: Dumbbell,
@@ -27,6 +28,7 @@ const services = [
 ]
 
 const Services = () => {
+  const [modal,setModal] = useState();
   return (
     <section className="py-20 bg-black">
       <div className="container mx-auto px-6">
@@ -61,11 +63,25 @@ const Services = () => {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
               <p className="text-gray-400 mb-6 leading-relaxed">{service.description}</p>
-              <Button className="bg-lime-400 hover:bg-lime-500 text-black font-semibold w-full">Learn More</Button>
+              {/* <Button className="bg-lime-400 hover:bg-lime-500 text-black font-semibold w-full">Learn More</Button> */}
+              <div onClick={()=>setModal(service)}  className="border border-gray-900  hover:border-lime-400 w-fit p-2 ">
+
+              <button className="text-white">Learn More</button>
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
+
+       {/* Modal Component */}
+      <Modal
+        open={!!modal}
+        onClose={() => setModal(null)}
+        title={modal?.title}
+        icon={modal?.icon}
+        content={modal?.description}
+      />
+
     </section>
   )
 }

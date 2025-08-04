@@ -3,14 +3,14 @@ import { Instagram, Facebook, Twitter, Youtube } from "lucide-react"
 
 const footerLinks = {
   company: [
-    { name: "About", href: "#" },
+    { name: "About", href: "/about" },
     { name: "Careers", href: "#" },
     { name: "Press", href: "#" },
     { name: "Blog", href: "#" },
   ],
   support: [
     { name: "Help Center", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "Contact", href: "/contact" },
     { name: "Privacy", href: "#" },
     { name: "Terms", href: "#" },
   ],
@@ -23,10 +23,10 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Youtube, href: "#", label: "YouTube" },
+  { icon: Instagram, href: "https://www.instagram.com/", label: "Instagram" },
+  { icon: Facebook, href: "https://www.facebook.com/", label: "Facebook" },
+  { icon: Twitter, href: "https://twitter.com/", label: "Twitter" },
+  { icon: Youtube, href: "https://www.youtube.com/", label: "YouTube" },
 ]
 
 const Footer = () => {

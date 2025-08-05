@@ -72,21 +72,21 @@ const itemVariants = {
 
 const Services = () => {
   return (
-    <div className="min-h-screen bg-black overflow-x-hidden pt-20">
+    <div className="min-h-screen bg-background pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-x-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-lime-400/20 to-green-400/20" />
-        <div className="max-w-screen-xl w-full mx-auto px-4 relative z-10">
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/40 to-lime-500/40 dark:from-lime-400/20 dark:to-green-400/20" />
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 break-words">
-              Our <span className="text-lime-400">Services</span>
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+              Our <span className="text-lime-500 dark:text-lime-400">Services</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-muted-foreground mb-8">
               Discover our comprehensive range of fitness services designed to help you achieve your goals
             </p>
           </motion.div>
@@ -104,30 +104,32 @@ const Services = () => {
           >
             {services.map((service, index) => (
               <motion.div key={index} variants={itemVariants}>
-                <Card className="bg-gray-900 border-gray-700 hover:border-lime-400 transition-all duration-300 group overflow-hidden">
+                <Card className="bg-card border-border hover:border-lime-400 transition-all duration-300 group overflow-hidden">
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={service.image || "/placeholder.svg"}
                       alt={service.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
                     <div className="absolute bottom-4 left-4">
                       <service.icon className="w-8 h-8 text-lime-400" />
                     </div>
                   </div>
                   <div className="p-6">
-                    <h3 className="text-white text-xl font-bold mb-2">{service.title}</h3>
-                    <p className="text-gray-400 mb-4">{service.description}</p>
+                    <h3 className="text-foreground text-xl font-bold mb-2">{service.title}</h3>
+                    <p className="text-muted-foreground mb-4">{service.description}</p>
                     <ul className="space-y-2 mb-6">
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className="text-gray-300 flex items-center">
+                        <li key={idx} className="text-muted-foreground flex items-center">
                           <div className="w-2 h-2 bg-lime-400 rounded-full mr-3" />
                           {feature}
                         </li>
                       ))}
                     </ul>
-                    <Button className="w-full bg-lime-400 hover:bg-lime-500 text-black">Learn More</Button>
+                    <Button className="w-full bg-lime-400 hover:bg-lime-500 text-black">
+                      Learn More
+                    </Button>
                   </div>
                 </Card>
               </motion.div>
@@ -150,7 +152,7 @@ const Services = () => {
               Join thousands of members who have transformed their lives with our expert guidance and world-class
               facilities.
             </p>
-            <Button size="lg" className="bg-black text-lime-400 hover:bg-gray-800 px-8 py-3 text-lg">
+            <Button size="lg" className="bg-foreground text-background hover:bg-muted px-8 py-3 text-lg">
               Get Started Today
             </Button>
           </motion.div>

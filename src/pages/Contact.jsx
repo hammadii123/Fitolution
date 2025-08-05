@@ -82,10 +82,10 @@ const membershipPlans = [
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-black pt-20 overflow-x-hidden">
+    <div className="min-h-screen bg-background pt-20">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-lime-400/20 to-green-400/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/40 to-lime-500/40 dark:from-lime-400/20 dark:to-green-400/20" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -93,10 +93,10 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
               Get in <span className="text-lime-400">Touch</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-muted-foreground mb-8">
               Ready to transform your life? Contact us today or choose your membership plan
             </p>
           </motion.div>
@@ -118,11 +118,11 @@ const Contact = () => {
                 <Card className="bg-gray-900 border-gray-700 text-center hover:border-lime-400 transition-colors duration-300">
                   <div className="p-6">
                     <div className="mx-auto w-12 h-12 bg-lime-400 rounded-full flex items-center justify-center mb-4">
-                      <info.icon className="w-6 h-6 text-black" />
+                      <info.icon className="w-6 h-6 text-foreground" />
                     </div>
-                    <h3 className="text-white font-bold mb-4">{info.title}</h3>
+                    <h3 className="text-foreground font-bold mb-4">{info.title}</h3>
                     {info.details.map((detail, idx) => (
-                      <p key={idx} className="text-gray-400 mb-1">
+                      <p key={idx} className="text-muted-foreground mb-1">
                         {detail}
                       </p>
                     ))}
@@ -143,32 +143,32 @@ const Contact = () => {
             >
               <Card className="bg-gray-900 border-gray-700">
                 <div className="p-6">
-                  <h2 className="text-white text-2xl font-bold mb-6">Send us a Message</h2>
+                  <h2 className="text-muted-foreground text-2xl font-bold mb-6">Send us a Message</h2>
                   <div className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <Input
                         placeholder="First Name"
-                        className="bg-gray-800 border-gray-600 text-white placeholder:text-gray-400"
+                        className="bg-gray-800 border-gray-600 text-foreground placeholder:text-muted-foreground"
                       />
                       <Input
                         placeholder="Last Name"
-                        className="bg-gray-800 border-gray-600 text-white placeholder:text-gray-400"
+                        className="bg-gray-800 border-gray-600 text-foreground placeholder:text-muted-foreground"
                       />
                     </div>
                     <Input
                       type="email"
                       placeholder="Email Address"
-                      className="bg-gray-800 border-gray-600 text-white placeholder:text-gray-400"
+                      className="bg-gray-800 border-gray-600 text-foreground placeholder:text-muted-foreground"
                     />
                     <Input
                       type="tel"
                       placeholder="Phone Number"
-                      className="bg-gray-800 border-gray-600 text-white placeholder:text-gray-400"
+                      className="bg-gray-800 border-gray-600 text-foreground placeholder:text-muted-foreground"
                     />
                     <Textarea
                       placeholder="Your Message"
                       rows={5}
-                      className="bg-gray-800 border-gray-600 text-white placeholder:text-gray-400"
+                      className="bg-gray-800 border-gray-600 text-foreground placeholder:text-muted-foreground"
                     />
                     <Button className="w-full bg-lime-400 hover:bg-lime-500 text-black">
                       Send Message
@@ -199,7 +199,7 @@ const Contact = () => {
       </section>
 
       {/* Membership Plans */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-background dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -208,10 +208,10 @@ const Contact = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-foreground mb-4">
               Choose Your <span className="text-lime-400">Membership</span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Select the perfect plan that fits your fitness goals and lifestyle
             </p>
           </motion.div>
@@ -238,14 +238,14 @@ const Contact = () => {
                     </div>
                   )}
                   <div className="p-6 text-center">
-                    <h3 className="text-white text-2xl font-bold mb-2">{plan.name}</h3>
+                    <h3 className="text-foreground text-2xl font-bold mb-2">{plan.name}</h3>
                     <div className="text-4xl font-bold text-lime-400 mb-6">
                       {plan.price}
-                      <span className="text-lg text-gray-400">{plan.period}</span>
+                      <span className="text-lg text-muted-foreground">{plan.period}</span>
                     </div>
                     <ul className="space-y-3 mb-8">
                       {plan.features.map((feature, idx) => (
-                        <li key={idx} className="text-gray-300 flex items-center">
+                        <li key={idx} className="text-muted-foreground flex items-center">
                           <div className="w-2 h-2 bg-lime-400 rounded-full mr-3" />
                           {feature}
                         </li>
@@ -254,8 +254,8 @@ const Contact = () => {
                     <Button
                       className={`w-full ${
                         plan.popular
-                          ? "bg-lime-400 hover:bg-lime-500 text-black"
-                          : "bg-gray-700 hover:bg-gray-600 text-white"
+                          ? "bg-lime-400 hover:bg-lime-500 text-foreground"
+                          : "bg-gray-700 hover:bg-gray-600 text-foreground"
                       }`}
                     >
                       Choose Plan
@@ -269,9 +269,9 @@ const Contact = () => {
       </section>
 
       {/* Social Media */}
-      <section className="py-12 bg-black">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="text-2xl font-bold text-white mb-6">Follow Us</h3>
+          <h3 className="text-2xl font-bold text-foreground mb-6">Follow Us</h3>
           <div className="flex justify-center space-x-6">
             {[Instagram, Facebook, Twitter].map((Icon, index) => (
               <motion.a
@@ -281,7 +281,7 @@ const Contact = () => {
                 whileTap={{ scale: 0.95 }}
                 className="w-12 h-12 bg-lime-400 rounded-full flex items-center justify-center hover:bg-lime-500 transition-colors duration-300"
               >
-                <Icon className="w-6 h-6 text-black" />
+                <Icon className="w-6 h-6 text-foreground" />
               </motion.a>
             ))}
           </div>

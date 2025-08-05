@@ -30,7 +30,7 @@ const trainingImages = [
 
 const Training = () => {
   return (
-    <section className="py-20 bg-black">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -39,11 +39,11 @@ const Training = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Train <span className="text-lime-400">Smarter</span> <br />
             Unleash Your <span className="text-lime-400">Potential</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Discover our comprehensive training programs designed to maximize your results
           </p>
         </motion.div>
@@ -66,7 +66,7 @@ const Training = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-6 left-6">
-                <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                <h3 className="text-xl font-bold text-muted-foreground">{item.title}</h3>
               </div>
               <div className="absolute inset-0 bg-lime-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.div>

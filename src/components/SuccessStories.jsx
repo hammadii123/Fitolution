@@ -6,7 +6,7 @@ const stories = [
   {
     name: "Sarah Johnson",
     transformation: "Lost 30lbs in 3 months",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b9e0d9d4?w=300&h=400&fit=crop&crop=face",
+    image: "/images/sarah-johnson.jpg",
     quote: "The transformation has been incredible. I feel stronger and more confident than ever before.",
     rating: 5,
   },

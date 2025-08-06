@@ -4,7 +4,7 @@ import Button from "./ui/Button"
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background pt-20">
       {/* Background Elements */}
       <div className="absolute inset-0">
         {/* Floating Green Circles */}
@@ -59,7 +59,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-6xl lg:text-8xl font-bold text-white mb-8 leading-tight"
+              className="text-6xl lg:text-8xl font-bold text-foreground mb-8 leading-tight"
             >
               Sculpt <span className="text-lime-400">Your</span> Body,
               <br />
@@ -70,7 +70,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl text-gray-300 mb-8 max-w-lg leading-relaxed"
+              className="text-xl text-muted-foreground mb-8 max-w-lg leading-relaxed"
             >
               Transform your body and mind with our revolutionary fitness programs designed for the modern athlete.
             </motion.p>
@@ -87,7 +87,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg bg-transparent"
+                className="border-white text-foreground hover:bg-white hover:text-black px-8 py-4 text-lg bg-transparent"
               >
                 Learn More
               </Button>

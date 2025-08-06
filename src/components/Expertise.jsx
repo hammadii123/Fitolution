@@ -24,7 +24,7 @@ const trainers = [
 
 const Expertise = () => {
   return (
-    <section className="py-20 bg-black">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -33,11 +33,11 @@ const Expertise = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Your Fitness <span className="text-lime-400">Goals</span>, <br />
             Their <span className="text-lime-400">Expertise</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Meet our team of certified professionals dedicated to your success
           </p>
         </motion.div>
@@ -65,7 +65,7 @@ const Expertise = () => {
                   </div>
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">{trainer.name}</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-2">{trainer.name}</h3>
               <p className="text-lime-400 font-semibold">{trainer.specialty}</p>
             </motion.div>
           ))}

@@ -13,7 +13,7 @@ const features = [
 
 const Inspiration = () => {
   return (
-    <section className="py-20 bg-black">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
@@ -23,11 +23,11 @@ const Inspiration = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h2 className="text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               Inspired to <br />
               Inspire Your <span className="text-lime-400">Best Self</span>
             </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               Join thousands who have transformed their lives through our comprehensive fitness programs and expert
               guidance.
             </p>
@@ -45,7 +45,7 @@ const Inspiration = () => {
                   <div className="w-6 h-6 bg-lime-400 rounded-full flex items-center justify-center">
                     <Check className="w-4 h-4 text-black" />
                   </div>
-                  <span className="text-gray-300">{feature}</span>
+                  <span className="text-muted-foreground">{feature}</span>
                 </motion.div>
               ))}
             </div>

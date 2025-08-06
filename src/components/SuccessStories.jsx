@@ -28,7 +28,7 @@ const stories = [
 
 const SuccessStories = () => {
   return (
-    <section className="py-20 bg-black">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -37,11 +37,11 @@ const SuccessStories = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Your <span className="text-lime-400">Success</span> Stories, <br />
             Our <span className="text-lime-400">Inspiration</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Real transformations from real people who trusted us with their fitness journey
           </p>
         </motion.div>
@@ -63,7 +63,7 @@ const SuccessStories = () => {
                     <Star key={i} className="w-5 h-5 text-lime-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-4 italic">"{story.quote}"</p>
+                <p className="text-muted-foreground mb-4 italic">"{story.quote}"</p>
                 <h3 className="text-xl font-bold text-white mb-1">{story.name}</h3>
                 <p className="text-lime-400 font-semibold">{story.transformation}</p>
               </div>

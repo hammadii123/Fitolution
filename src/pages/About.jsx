@@ -79,7 +79,7 @@ const AboutUs = () => {
   return (
     <div className="bg-black text-white">
 
-  {/* Hero Section */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-20">
         {/* Background Floating Elements */}
         <div className="absolute inset-0">
@@ -144,10 +144,10 @@ const AboutUs = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-xl text-gray-300 mb-8 max-w-lg leading-relaxed"
               >
-                Transforming lives through fitness since 2019. We're more than just a gym – 
+                Transforming lives through fitness since 2019. We're more than just a gym –
                 we're your partners in achieving a healthier, stronger, and more confident you.
               </motion.p>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -155,8 +155,8 @@ const AboutUs = () => {
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <Button
-                size="lg"
-                className="bg-lime-400 hover:bg-lime-500 text-lime-500 font-semibold px-8 py-4 text-lg"
+                  size="lg"
+                  className="bg-lime-400 hover:bg-lime-500 text-lime-500 font-semibold px-8 py-4 text-lg"
                 > Our Story </Button>
 
                 <Button
@@ -182,7 +182,7 @@ const AboutUs = () => {
                   alt="Man doing weight lifting"
                   className="w-full max-w-md h-auto object-cover rounded-lg"
                 />
-               </div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -222,17 +222,17 @@ const AboutUs = () => {
                 Who We <span className="text-lime-400">Are</span>
               </h2>
               <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-                Fitolution was born from a simple belief: everyone deserves access to quality fitness 
-                guidance and a supportive community. Founded in 2019 by a team of passionate fitness 
-                professionals, we started with a vision to revolutionize how people approach their 
+                Fitolution was born from a simple belief: everyone deserves access to quality fitness
+                guidance and a supportive community. Founded in 2019 by a team of passionate fitness
+                professionals, we started with a vision to revolutionize how people approach their
                 health and wellness journey.
               </p>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                What began as a small local gym has evolved into a comprehensive fitness platform 
+                What began as a small local gym has evolved into a comprehensive fitness platform
                 that combines cutting-edge technology with personalized training approaches.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                Today, Fitolution continues to innovate, offering both in-person and digital 
+                Today, Fitolution continues to innovate, offering both in-person and digital
                 solutions to make fitness accessible, enjoyable, and sustainable for everyone.
               </p>
             </motion.div>
@@ -269,8 +269,8 @@ const AboutUs = () => {
               Our <span className="text-lime-400">Mission</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              To empower individuals to transform their lives through fitness, providing expert 
-              guidance, state-of-the-art facilities, and a supportive community that makes 
+              To empower individuals to transform their lives through fitness, providing expert
+              guidance, state-of-the-art facilities, and a supportive community that makes
               achieving health goals both achievable and enjoyable.
             </p>
           </motion.div>
@@ -335,7 +335,7 @@ const AboutUs = () => {
       </section>
 
       {/* Team Section */}
- <section className="py-20 bg-black">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -368,7 +368,7 @@ const AboutUs = () => {
                     alt={member.name}
                     className="w-24 h-24 rounded-full mx-auto object-cover"
                   />
-        
+
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
                 <p className="text-lime-400 font-medium mb-2">{member.role}</p>
@@ -381,8 +381,9 @@ const AboutUs = () => {
       </section>
 
       {/* CTA Section - Matching your existing style */}
-      <section className="py-20 bg-lime-400">
-        <div className="container mx-auto px-6">
+
+      <section className="py-20 bg-gradient-to-br from-[#0f1f1b] via-[#143529] to-[#1a2e22] text-white">
+        <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -390,29 +391,27 @@ const AboutUs = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="text-5xl lg:text-6xl font-bold text-black mb-6">
-              Ready to Start <br />
-              <span className="text-gray-800">Your Journey?</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+              Ready to Start Your Journey?
             </h2>
-            <p className="text-xl text-black/80 mb-8 max-w-2xl mx-auto">
-              Join thousands of members who have transformed their lives with Fitolution. 
+            <p className="text-base md:text-lg text-white/80 mb-6 max-w-2xl mx-auto leading-relaxed">
+              Join thousands who have transformed their lives with Fitolution.
               Your healthiest, strongest self is waiting.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-black hover:bg-gray-800 text-white px-8 py-4 text-lg">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
+              <button className="bg-green-500 hover:bg-green-400 text-black px-6 py-3 text-base font-semibold rounded-md transition duration-300 transform hover:scale-105">
                 Start Your Journey
-              </Button>
-             <Button
-                variant="outline"
-                className="border-black text-black hover:bg-black hover:text-white px-8 py-4 text-lg bg-white"
-              >
+              </button>
+
+              <button className="bg-green-500 hover:bg-green-400 text-black px-6 py-3 text-base font-semibold rounded-md transition duration-300 transform hover:scale-105">
                 View Programs
-              </Button>
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
+
     </div>
   )
 }

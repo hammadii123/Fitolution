@@ -61,9 +61,11 @@ const Navbar = () => {
           </div>
 
           <div className="hidden lg:flex items-center space-x-4">
+            <Link to="/signin">
             <Button variant="ghost" className="text-white hover:text-lime-400">
               Sign In
             </Button>
+            </Link>
             <Button className="bg-lime-400 hover:bg-lime-500 text-black font-semibold px-6">Get Started</Button>
           </div>
 

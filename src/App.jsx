@@ -6,6 +6,7 @@ import Services from "./pages/Services"
 import Contact from "./pages/Contact"
 import About from "./pages/About"
 import "./App.css"
+import BackToTop from "./components/BackToTop"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
+        <BackToTop />
         <Footer />
       </div>
     </Router>
